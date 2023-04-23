@@ -84,7 +84,7 @@ const CipherMapSection = () => {
           </Flex>
         </Flex>
       </Flex>
-      <Divider color="red" py={2} />
+      <Divider py={2} />
     </Box>
   );
 };

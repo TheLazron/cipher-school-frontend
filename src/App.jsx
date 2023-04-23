@@ -3,6 +3,7 @@ import WithSubnavigation from "./components/Navbar";
 import HeroSection from "./sections/HeroSection";
 import AboutUser from "./sections/AboutUsersSection";
 import CipherMapSection from "./sections/CipherMapSection";
+import UserSocialsSection from "./sections/UserSocialsSection";
 function App() {
   return (
     <>
@@ -14,6 +15,7 @@ function App() {
         <Flex flexDirection="column" bgColor="brand.secondary">
           <AboutUser />
           <CipherMapSection />
+          <UserSocialsSection />
         </Flex>
       </Flex>
     </>
