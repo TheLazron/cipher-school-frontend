@@ -10,6 +10,7 @@ import {
 } from "@chakra-ui/react";
 import { useContext } from "react";
 import { userContext } from "../context/userContext";
+import { NavLink } from "react-router-dom";
 const HeroSection = () => {
   const data = useContext(userContext);
   const user = data?.data?.user?._doc;
@@ -62,7 +63,7 @@ const HeroSection = () => {
           fontWeight="medium"
           display={{ base: "none", md: "block" }}
         >
-          {user?.followers.length} Followers
+          <NavLink to="/followers">{user?.followers.length} Followers</NavLink>
         </Text>
       </Flex>
     </Box>

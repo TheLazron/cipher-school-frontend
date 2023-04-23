@@ -14,6 +14,8 @@ import PropTypes from "prop-types";
 import CustomCheckBox from "./CustomCheckbox";
 import axios from "axios";
 import { mutate } from "swr";
+import { userContext } from "../context/userContext";
+import { useContext } from "react";
 
 const InterestsModal = ({ isOpen, onClose }) => {
   //   const { value, onChange } = useCheckboxGroup();
@@ -22,18 +24,21 @@ const InterestsModal = ({ isOpen, onClose }) => {
   });
   console.log("values", value);
 
+  const data = useContext(userContext);
+  const user = data?.data?.user._doc;
+
   const handleSubmit = () => {
     console.log("submitting");
     axios
       .post("http://localhost:8080/updateInterests", {
-        email: "john@doe.com",
+        email: user.email,
         newInterests: value,
       })
       .then((data) => {
         console.log(data);
         mutate(
           "http://localhost:8080/getInterests?email=" +
-            encodeURIComponent("john@doe.com"),
+            encodeURIComponent(user.email),
           async (prevSitesData) => {
             console.log("pd", prevSitesData);
             return { interests: [...value] };
