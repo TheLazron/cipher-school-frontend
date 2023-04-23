@@ -1,17 +1,20 @@
-import { Flex } from "@chakra-ui/react";
-import HeroSection from "./sections/HeroSection";
+import { Box, Flex } from "@chakra-ui/react";
 import WithSubnavigation from "./components/Navbar";
-import ScrollDownSection from "./sections/ScrollDownSection";
-import StatsSection from "./sections/StatsSection";
-
+import HeroSection from "./sections/HeroSection";
+import AboutUser from "./sections/AboutUsersSection";
+import CipherMapSection from "./sections/CipherMapSection";
 function App() {
   return (
     <>
       <Flex width="100%" justifyContent="center" flexDirection="column">
-        <WithSubnavigation />
-        <HeroSection />
-        <ScrollDownSection />
-        <StatsSection />
+        <Box position="sticky" top="0" zIndex="1">
+          <WithSubnavigation />
+          <HeroSection />
+        </Box>
+        <Flex flexDirection="column" bgColor="brand.secondary">
+          <AboutUser />
+          <CipherMapSection />
+        </Flex>
       </Flex>
     </>
   );
