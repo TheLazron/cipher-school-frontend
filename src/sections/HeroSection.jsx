@@ -8,7 +8,12 @@ import {
   Text,
   useBreakpointValue,
 } from "@chakra-ui/react";
+import { useContext } from "react";
+import { userContext } from "../context/userContext";
 const HeroSection = () => {
+  const data = useContext(userContext);
+  const user = data?.data?.user?._doc;
+
   return (
     <Box
       display="flex"
@@ -29,7 +34,7 @@ const HeroSection = () => {
             <Avatar
               size={useBreakpointValue({ base: "md", md: "2xl" })}
               name="Dan Abrahmov"
-              src="https://bit.ly/dan-abramov"
+              src={user?.profileUrl}
             />
             <IconButton
               rounded="full"
@@ -47,9 +52,9 @@ const HeroSection = () => {
           <Stack spacing={0.5} fontSize={{ sm: "xl", md: "2xl" }} ml={3}>
             <Text fontWeight="medium">Hello,</Text>
             <Text fontSize={"3xl"} fontWeight="bold">
-              Aryaman
+              {user?.name}
             </Text>
-            <Text>teddybearlaughs@gmail.com</Text>
+            <Text>{user?.email}</Text>
           </Stack>
         </Flex>
         <Text
@@ -57,7 +62,7 @@ const HeroSection = () => {
           fontWeight="medium"
           display={{ base: "none", md: "block" }}
         >
-          0 Followers
+          {user?.followers.length} Followers
         </Text>
       </Flex>
     </Box>

@@ -7,6 +7,7 @@ import UserSocialsSection from "./sections/UserSocialsSection";
 import ProfessionalInformationSection from "./sections/ProfessionalInformationSection";
 import ChangePasswordSection from "./sections/ChangePasswordSection";
 import InterestsSection from "./sections/InterestsSection";
+
 function App() {
   return (
     <>

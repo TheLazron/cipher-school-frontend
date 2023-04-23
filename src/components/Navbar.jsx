@@ -28,9 +28,17 @@ import {
   BellIcon,
   SearchIcon,
 } from "@chakra-ui/icons";
+import { userContext } from "../context/userContext";
+import { useContext } from "react";
 
 export default function WithSubnavigation() {
   const { isOpen, onToggle } = useDisclosure();
+
+  const data = useContext(userContext);
+
+  if (data) {
+    console.log("userdata", data);
+  }
 
   return (
     <Box>
@@ -101,7 +109,7 @@ export default function WithSubnavigation() {
           </IconButton>
           <Avatar
             size={{ base: "xs", md: "sm" }}
-            src={"https://avatars.dicebear.com/api/male/username.svg"}
+            src={data?.data.user._doc.profileUrl}
           />
           <Switch size={{ base: "md", md: "lg" }} />
         </Stack>
