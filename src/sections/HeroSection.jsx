@@ -27,7 +27,7 @@ const HeroSection = () => {
         <Flex alignItems={"center"}>
           <Flex position="relative">
             <Avatar
-              size={useBreakpointValue({ sm: "xl", md: "2xl" })}
+              size={useBreakpointValue({ base: "md", md: "2xl" })}
               name="Dan Abrahmov"
               src="https://bit.ly/dan-abramov"
             />
@@ -35,7 +35,7 @@ const HeroSection = () => {
               rounded="full"
               bgColor="brand.black"
               color="white"
-              size={useBreakpointValue({ sm: "sm", md: "lg" })}
+              size={useBreakpointValue({ base: "sm", md: "lg" })}
               aria-label="Search database"
               position="absolute"
               bottom={-5}

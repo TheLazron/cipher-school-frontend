@@ -6,7 +6,6 @@ import {
   Heading,
   SimpleGrid,
   Text,
-  useBreakpointValue,
 } from "@chakra-ui/react";
 import {
   AiFillLinkedin,
@@ -28,11 +27,9 @@ const UserSocialsSection = () => {
           justifyContent={"space-between"}
           alignItems={"center"}
         >
-          <Text fontSize={useBreakpointValue({ xs: "sm", sm: "md", md: "xl" })}>
-            ON THE WEB
-          </Text>
+          <Text fontSize={{ base: "md", md: "xl" }}>ON THE WEB</Text>
           <Button
-            size={{ sm: "sm", md: "md" }}
+            size={{ base: "sm", md: "md" }}
             bgColor="brand.primary"
             color="white"
             onClick={() => {
@@ -43,7 +40,7 @@ const UserSocialsSection = () => {
           </Button>
         </Heading>
         <SimpleGrid
-          columns={{ sm: 1, base: 2, md: 3 }}
+          columns={{ base: 1, md: 3 }}
           spacing="40px"
           width="100%"
           mt={5}

@@ -20,11 +20,11 @@ const ProfessionalInformationSection = () => {
           justifyContent={"space-between"}
           alignItems={"center"}
         >
-          <Text fontSize={useBreakpointValue({ xs: "sm", sm: "md", md: "xl" })}>
+          <Text fontSize={useBreakpointValue({ base: "md", md: "xl" })}>
             PROFESSIONAL INFORMATION
           </Text>
           <Button
-            size={{ sm: "sm", md: "md" }}
+            size={{ base: "sm", md: "md" }}
             bgColor="brand.primary"
             color="white"
             onClick={() => {
@@ -36,7 +36,7 @@ const ProfessionalInformationSection = () => {
         </Heading>
 
         <SimpleGrid
-          columns={{ sm: 1, base: 2, md: 2 }}
+          columns={{ base: 1, md: 2 }}
           spacing="40px"
           width="100%"
           mt={5}

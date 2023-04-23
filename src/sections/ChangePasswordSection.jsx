@@ -7,6 +7,7 @@ import {
   InputGroup,
   Input,
   useDisclosure,
+  Divider,
 } from "@chakra-ui/react";
 import ChangePasswordModal from "../components/ChangePasswordModal";
 
@@ -21,12 +22,12 @@ const ChangePasswordSection = () => {
           justifyContent={"space-between"}
           alignItems={"center"}
         >
-          <Text fontSize={{ sm: "md", md: "xl" }}>PASSWORD AND SECURITY</Text>
+          <Text fontSize={{ base: "md", md: "xl" }}>PASSWORD AND SECURITY</Text>
 
           <ChangePasswordModal isOpen={isOpen} onClose={onClose} />
 
           <Button
-            size={{ sm: "sm", md: "md" }}
+            size={{ base: "sm", md: "md" }}
             bgColor="brand.primary"
             color="white"
             onClick={onOpen}
@@ -38,6 +39,7 @@ const ChangePasswordSection = () => {
           <Input isDisabled value="admin" type="password" bgColor="white" />
         </InputGroup>
       </Flex>
+      <Divider />
     </Box>
   );
 };

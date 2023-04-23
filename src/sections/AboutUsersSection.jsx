@@ -18,9 +18,9 @@ const AboutUser = () => {
           justifyContent={"space-between"}
           alignItems={"center"}
         >
-          <Text fontSize={{ sm: "md", md: "xl" }}>ABOUT ME</Text>
+          <Text fontSize={{ base: "md", md: "xl" }}>ABOUT ME</Text>
           <Button
-            size={{ sm: "sm", md: "md" }}
+            size={{ base: "sm", md: "md" }}
             bgColor="brand.primary"
             color="white"
           >

@@ -17,12 +17,12 @@ const CipherMapSection = () => {
           justifyContent={"space-between"}
           alignItems={"center"}
         >
-          <Text fontSize={{ sm: "md", md: "xl" }}>CIPHER MAP</Text>
+          <Text fontSize={{ base: "md", md: "xl" }}>CIPHER MAP</Text>
         </Heading>
         <Flex
           flexDirection="column"
           justifyContent="space-around"
-          mx={{ sm: 0, base: 2, md: 10 }}
+          mx={{ base: 1, md: 10 }}
           //   alignItems="center"
         >
           <Box mt={5}>
@@ -47,37 +47,37 @@ const CipherMapSection = () => {
 
           <Flex
             alignSelf={"flex-end"}
-            gap={{ sm: 2, md: 3 }}
+            gap={{ base: 2, md: 3 }}
             alignItems="center"
           >
-            <Text fontSize={{ sm: "xs", md: "lg" }}>Less</Text>
+            <Text fontSize={{ base: "xs", md: "lg" }}>Less</Text>
             <Box
               bg="brand.primary"
               opacity={0.2}
-              w={useBreakpointValue({ sm: 3, md: 5 })}
-              h={useBreakpointValue({ sm: 3, md: 5 })}
+              w={useBreakpointValue({ base: 3, md: 5 })}
+              h={useBreakpointValue({ base: 3, md: 5 })}
               color="white"
             ></Box>
             <Box
               bg="brand.primary"
               opacity={0.4}
-              w={useBreakpointValue({ sm: 3, md: 5 })}
-              h={useBreakpointValue({ sm: 3, md: 5 })}
+              w={useBreakpointValue({ base: 3, md: 5 })}
+              h={useBreakpointValue({ base: 3, md: 5 })}
               color="white"
             ></Box>
             <Box
               bg="brand.primary"
               opacity={0.7}
-              w={useBreakpointValue({ sm: 3, md: 5 })}
-              h={useBreakpointValue({ sm: 3, md: 5 })}
+              w={useBreakpointValue({ base: 3, md: 5 })}
+              h={useBreakpointValue({ base: 3, md: 5 })}
               //   p={2}
               color="white"
             ></Box>
             <Box
               bg="brand.primary"
               opacity={1}
-              w={useBreakpointValue({ sm: 3, md: 5 })}
-              h={useBreakpointValue({ sm: 3, md: 5 })}
+              w={useBreakpointValue({ base: 3, md: 5 })}
+              h={useBreakpointValue({ base: 3, md: 5 })}
               color="white"
             ></Box>
             <Text>More</Text>
