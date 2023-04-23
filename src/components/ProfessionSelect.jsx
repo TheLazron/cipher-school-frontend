@@ -15,6 +15,7 @@ const ProfessionSelect = ({ heading, options, isDisabled }) => {
         variant="filled"
         placeholder={heading}
         isDisabled={isDisabled}
+        bg="white"
       >
         {options.map((option, i) => {
           return (

@@ -6,6 +6,10 @@ const colors = {
     secondary: "#f2f5fa",
     black: "#353a42",
   },
+  primaryTheme: {
+    bgColor: "#F3912E",
+    color: "redf",
+  },
 };
 
 const customTheme = extendTheme({

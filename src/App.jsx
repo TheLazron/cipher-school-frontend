@@ -5,6 +5,7 @@ import AboutUser from "./sections/AboutUsersSection";
 import CipherMapSection from "./sections/CipherMapSection";
 import UserSocialsSection from "./sections/UserSocialsSection";
 import ProfessionalInformationSection from "./sections/ProfessionalInformationSection";
+import ChangePasswordSection from "./sections/ChangePasswordSection";
 function App() {
   return (
     <>
@@ -18,6 +19,7 @@ function App() {
           <CipherMapSection />
           <UserSocialsSection />
           <ProfessionalInformationSection />
+          <ChangePasswordSection />
         </Flex>
       </Flex>
     </>
